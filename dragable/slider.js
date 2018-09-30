@@ -1,4 +1,4 @@
-window.Slider = function(ele) {
+function Slider(ele) {
   this.flag = false;
   this.init_x = 0; // 初始值
   this.slide_x = 0; // 滑动值
