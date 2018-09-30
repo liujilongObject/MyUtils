@@ -47,6 +47,7 @@ Slider.prototype = {
   move() {
     let touch;
     let ele = this.ele;
+    let inner_width = ele.offsetWidth/2;
     if (event.touches) {
       touch = event.touches[0];
     } else {
@@ -56,9 +57,9 @@ Slider.prototype = {
       this.slide_x = touch.clientX;
       this.x = this.slide_x - this.init_x;
       if (this.x < 0) {
-        ele.style.left = '-150px';
+        ele.style.left = -inner_width + 'px';
       } else if(this.x > 0){
-        ele.style.left = '150px'; 
+        ele.style.left =  inner_width + 'px'; 
       };
     }
   },
